@@ -1,6 +1,8 @@
 from flask import Flask
+import requests
+
 app = Flask(__name__)
 
 @app.route("/")
 def index():
-	return "I am Flask!"
+	return requests.get("https://www.google.com")
