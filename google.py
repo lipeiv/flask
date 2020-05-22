@@ -3,6 +3,6 @@ import requests
 
 app = Flask(__name__)
 
-@app.route("/<google_url>")
+@app.route("/")
 def index():
-	return requests.get("https://www.google.com"+google_url).text
+	return requests.get("https://www.google.com").text
